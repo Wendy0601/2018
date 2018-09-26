@@ -1,0 +1,2 @@
+model_checkpoint_path: "E:/05_research/04_deep_learning_model/Save_parameters/modelA/modelA_ratio100_set05"
+all_model_checkpoint_paths: "E:/05_research/04_deep_learning_model/Save_parameters/modelA/modelA_ratio100_set05"
