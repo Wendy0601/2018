@@ -42,27 +42,27 @@ figure('units','pixels','position',[50 300 350 220]);
 % subplot(1,2,1);
 plot(two_event_norm(bus,1:4:end)','k-','lineWidth',2);xlim([20,100]);  ylim([-0.08,0.005]);  
 hold on;plot( sec_event_norm(bus,1:4:end)','b--','lineWidth',2);  
-legend('Two events','Only second event', 'location','best')
+legend('Two events','The second event only', 'location','best')
 xlim([20,100]) ; 
 xlabel('Time (0.033 second)') 
-ylabel('Voltage Magnitudes (p.u.)') 
+ylabel({'Voltage Magnitudes';'after Normalization  (p.u.)'})
 set(gca,'fontName','Times New Roman')  
 % subplot(1,2,2);
 figure('units','pixels','position',[50 300 350 220]); 
  plot(residue(bus,1:4:end)','g-','lineWidth',2);   ylim([-0.06,0.005]);  
 hold on;plot( sec_event_norm(bus,1:4:end)','b--','lineWidth',2);  
-legend('The residual','Only second event', 'location','best')
+legend('The residual','The second event only', 'location','best')
 xlim([20,100]) ;    
 xlabel('Time (0.033 second)') 
-ylabel('Voltage Magnitudes (p.u.)') 
+ylabel({'Voltage Magnitudes';'after Normalization  (p.u.)'}) 
 set(gca,'fontName','Times New Roman') 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % parameters
 t01=122; t02 = t01 + 60; method =2; thres=0.9999;gap=0;noise=0; noise_level=0;freq0=2; dimx =9;
 bus=25;  
-load('E:\identification_data\01_PSSE_datasets\Dataset\01Multiple_event\Figure_data\gener8_25-54.mat', 'bus_v'); 
+load('E:\identification_data\01_PSSE_datasets\Dataset\01Multiple_event\Figure_data\gener8_25-54_halfsec_new.mat', 'bus_v'); 
 two_event = bus_v;  
-load('E:\identification_data\01_PSSE_datasets\Dataset\Generator_trip\generator_trip8.mat', 'bus_v');
+load('E:\identification_data\01_PSSE_datasets\Dataset\01Multiple_event\Figure_data\gener8_new.mat', 'bus_v');
 first_event = bus_v;
 load('E:\identification_data\01_PSSE_datasets\Dataset\01Multiple_event\Figure_data\line25-54_new', 'bus_v');
 sec_event = bus_v;
@@ -100,17 +100,17 @@ real_approx = real(mu_approx);
 figure('units','pixels','position',[50 300 350 220]); 
 plot(two_event_norm(bus,1:4:end)','k-','lineWidth',2);xlim([20,100]);  ylim([-0.08,0.005]);  
 hold on;plot( sec_event_norm(25,1:4:end)','b--','lineWidth',2);  
-legend('Two events','Only second event', 'location','best')
+legend('Two events','The second event only', 'location','best')
 xlim([20,100]) ; 
 xlabel('Time (0.033 second)') 
-ylabel('Voltage Magnitudes (p.u.)') 
+ylabel({'Voltage Magnitudes';'after Normalization  (p.u.)'}) 
 set(gca,'fontName','Times New Roman') 
 figure('units','pixels','position',[50 300 350 220]); 
 %  subplot(2,1,2);
  plot(residue(bus,1:4:end)','g-','lineWidth',2);   ylim([-0.06,0.005]);  
 hold on;plot( sec_event_norm(25,1:4:end)','b--','lineWidth',2);  
-legend('The residual','Only second event', 'location','best')
+legend('The residual','The second event only', 'location','best')
 xlim([20,100]) ;    
 xlabel('Time (0.033 second)') 
-ylabel('Voltage Magnitudes (p.u.)') 
+ylabel({'Voltage Magnitudes';'after Normalization  (p.u.)'})
 set(gca,'fontName','Times New Roman')  
